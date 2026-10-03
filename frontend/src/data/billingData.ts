@@ -126,13 +126,34 @@ export const initialInvoices: StoredInvoice[] = [
     created_at: "2026-10-03",
   },
 ];
-
-let invoiceMemoryStore = [...initialInvoices];
+const INVOICE_STORAGE_KEY = "hotelos_invoices_v1";
 
 export function getInvoicesStore(): StoredInvoice[] {
-  return invoiceMemoryStore;
+  try {
+    const stored = localStorage.getItem(INVOICE_STORAGE_KEY);
+
+    if (stored) {
+      return JSON.parse(stored) as StoredInvoice[];
+    }
+
+    localStorage.setItem(
+      INVOICE_STORAGE_KEY,
+      JSON.stringify(initialInvoices)
+    );
+
+    return [...initialInvoices];
+  } catch {
+    return [...initialInvoices];
+  }
 }
 
 export function saveInvoiceToStore(inv: StoredInvoice) {
-  invoiceMemoryStore = [inv, ...invoiceMemoryStore];
+  const invoices = getInvoicesStore();
+
+  const updatedInvoices = [inv, ...invoices];
+
+  localStorage.setItem(
+    INVOICE_STORAGE_KEY,
+    JSON.stringify(updatedInvoices)
+  );
 }
