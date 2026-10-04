@@ -76,7 +76,7 @@ Room management supports:
 ### Restaurant
 
 - Menu catalog
-- Add/Edit/Delete food
+- Add/Edit/Delete food items
 - Availability toggle
 - Category/search filters
 - GST and pricing
