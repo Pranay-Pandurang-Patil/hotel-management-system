@@ -404,8 +404,7 @@ Before using it for actual hotel operations, the following improvements would be
 * Persistent server-side storage for operational data.
 * Database migrations.
 * API rate limiting.
-* Secure environment variable management.
-* Audit logging.
+* Secure environment variable management. and Audit logging.
 * Automated database backups.
 * HTTPS configuration.
 * Payment gateway integration where required.
@@ -456,7 +455,7 @@ HotelOS demonstrates the practical application of:
 
 **Pranay Pandurang Patil**
 
-Computer Science & Engineering Student
+Computer Science & Engineering Student At KLS GIT Belgaum,Karnataka,India.
 
 GitHub: [Pranay-Pandurang-Patil](https://github.com/Pranay-Pandurang-Patil)
 
